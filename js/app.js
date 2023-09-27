@@ -1,24 +1,13 @@
 
 
 function send() {
-   //ввод данных из поля ввода html input
-   //let x = prompt("Введите х")
-
    let message = document.getElementById('message').value;
-
-   //логика
-
    if (message == '') {
-      alert("Нужно ввести сообщение")
+      text = 'Вы не ввели имя';
+   } else {
+      text = `${message}, привет!`;
    }
-
-   //Вывод данных в поле 
-
-   document.getElementById('result').innerText = message;
-
-   //document.getElementById('result').value = message;
-   //alert(`${x} * 5 = ${resuls}`)
-
+   document.getElementById('result_chat').innerText = text;
 }
 
 function fami() {
@@ -29,7 +18,7 @@ function fami() {
       name = `Здравствуй, ${name}`;
    }
 
-   document.getElementById('result').innerText = name;
+   document.getElementById('result_fami').innerText = name;
 }
 
 
